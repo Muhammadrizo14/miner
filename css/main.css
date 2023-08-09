@@ -15,12 +15,88 @@
   src: url('../font/Montserrat-Light.ttf');
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  z-index: 12312321;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9370DB;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #BA55D3;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FF00FF;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0%   {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0%   {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
 
 body,
 html {
   padding: 0;
   margin: 0;
 }
+
+
 
 
 * {
@@ -315,7 +391,7 @@ li {
 
 
 .fourth__block__subtitle {
-  padding-top: 3  0px;
+  padding-top: 30px;
   font-size: 14px;
 }
 
@@ -416,6 +492,7 @@ li {
 
 
 .bonus {
+  cursor: pointer;
   border-radius: 10px;
 }
 
@@ -468,4 +545,58 @@ li {
   flex-direction: column;
   gap: 10px;
   margin-right: 28px;
+}
+
+.auth {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  display: none;
+}
+
+.auth__content {
+  color: #fff;
+  width: 604px;
+  height: 292px;
+  border-radius: 10px;
+  background: #1B1A20;  
+  z-index: 11111111;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth__func__title {
+  font-size: 32px;
+}
+
+.auth__button {
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 33px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background: var(--blue-gradient, linear-gradient(270deg, #0D6CCA 0%, #1F87EA 100%));
+  box-shadow: 0px 11px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.auth__button svg {
+  margin-right: 4px;
+}
+
+.bigtelegram {
+  width: 167.596px;
+  height: 169.665px;
+  margin-left: 69px;
 }
