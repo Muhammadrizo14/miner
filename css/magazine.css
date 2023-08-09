@@ -1,0 +1,180 @@
+.maner__block {
+  width: 1046px;
+  height: 701px;
+}
+
+.miner__headering {
+  display: flex;
+  justify-content: space-between;
+}
+
+.magazine__uptitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.magazine__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.magazine__info {
+  display: flex;
+}
+
+.magazine__infoText__balance {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.magazine__infoText__subtitle {
+  color: #FFF;
+  padding-top: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.magazine__info__button {
+  margin-top: 13px;
+  width: 160px;
+  height: 34px;
+}
+
+.miner__slider__arrows {
+  justify-content: unset;
+}
+
+
+.miner__slides {
+  overflow: hidden;
+  padding-top: 17px;
+}
+
+.miner__slide {
+  padding: 0;
+  width: 240px;
+  height: 464px;
+  justify-content: unset;
+}
+
+.miner__slide__title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.miner__slide__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.miner__slide__service {
+  display: flex;
+  align-items: center;
+  padding-bottom: 18px;
+  justify-content: center;
+}
+
+.miner__slide__main__image {
+  width: 100.19px;
+  margin: 0 auto;
+  padding: 27px 0px;
+}
+
+.miner__slide__service p {
+  margin-left: 9px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.miner__slide__service p span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.miner__slide__income {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 38px;
+}
+
+.miner__slide__income p {
+  margin-left: 9px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.miner__slide__button {
+  width: 212px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 60s0;
+}
+
+.historyof__opiration {
+  margin-top: 14px;
+  margin-bottom: 27px;
+  width: 1046px;
+  height: 408px;
+}
+
+.historyof__opiration__title {
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+
+.list__history {
+  background-color: #171823;
+  width: 927px;
+  height: 280px;
+  overflow-y: scroll;
+  border-radius: 17px;
+}
+
+
+.list__history::-webkit-scrollbar {
+  width: 10px;
+}
+
+.list__history::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 17px;
+}
+
+.list__history::-webkit-scrollbar-thumb {
+  background: #1C83E8; 
+  border-radius: 10px;
+}
+
+
+.list__history::-webkit-scrollbar-thumb:hover {
+  background: #11569b; 
+}
+
+
+.history__coin {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.current__history {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px;
+  border-bottom: 1px solid #0D6CCA;
+  margin: 0px 15px 0px 28px;
+}
+.current__history:first-child {
+  margin: 35px 15px 0px 28px;
+}
+

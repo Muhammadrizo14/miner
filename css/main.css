@@ -155,12 +155,17 @@ li {
   align-items: center;
 }
 
+.bluecolor {
+  color: #0D6CCA;
+}
+
 
 .sidebar__list li img {
   margin-right: 5px;
 }
 
 .content {
+  min-height: 100vh;
   margin-left: 284px;
   width: 100%;
   background: #050911;
@@ -371,17 +376,8 @@ li {
 }
 
 .replace__button {
-  border-radius: 25px;
-  border: 0;
   width: 227px;
   height: 33px;
-  background: var(--blue-gradient, linear-gradient(270deg, #0D6CCA 0%, #1F87EA 100%));
-  box-shadow: 0px 11px 12px 0px rgba(0, 0, 0, 0.25);
-  color: #FFF;
-  cursor: pointer;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .fourth__block__title {
@@ -477,9 +473,7 @@ li {
   text-align: center;
 }
 
-.pormocode__button {
-  width: 169px;
-  height: 30px;
+.button {
   color: #FFF;
   cursor: pointer;
   border-radius: 25px;
@@ -488,6 +482,11 @@ li {
   box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.25);
   font-size: 12px;
   font-weight: 500;
+}
+
+.pormocode__button {
+  width: 169px;
+  height: 30px;
 }
 
 
