@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Muller', sans-serif;
+  font-family: 'Muller';
   src: url('../font/MullerRegular.woff');
 }
 
 
 @font-face {
-  font-family: 'Montserrat', sans-serif;
-  src: url('../font/Montserrat-Regular.ttf');
+  font-family: 'Montserrat';
+  src: url('../font/Montserrat-Regular.woff') format("woff")
 }
 
 
@@ -20,13 +20,13 @@ body,
 html {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -85,7 +85,7 @@ li {
 }
 
 .content {
-  margin-left: 266px;
+  margin-left: 284px;
   width: 100%;
   background: #050911;
   color: #fff;
@@ -286,6 +286,7 @@ li {
 }
 
 .fourth__block {
+  align-items: center;
   width: 271px;
   height: 382px;
   text-align: center;
@@ -293,12 +294,28 @@ li {
   padding: 25px 18px 30px 18px;
 }
 
+.replace__button {
+  border-radius: 25px;
+  border: 0;
+  width: 227px;
+  height: 33px;
+  background: var(--blue-gradient, linear-gradient(270deg, #0D6CCA 0%, #1F87EA 100%));
+  box-shadow: 0px 11px 12px 0px rgba(0, 0, 0, 0.25);
+  color: #FFF;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .fourth__block__title {
   font-size: 20px;
+  padding-bottom: 20px;
 }
 
 
 .fourth__block__subtitle {
+  padding-top: 3  0px;
   font-size: 14px;
 }
 
@@ -419,6 +436,25 @@ li {
   border-radius: 10px;
   border: 1px solid #08C0FF;
   background: linear-gradient(180deg, #181A29 0%, #14151B 100%);
+}
+
+.replace__input {
+  margin-bottom: 9px;
+  border-radius: 23px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  width: 242px;
+  height: 46px;
+  background: #181A29;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.replace__image {
+  width: 24px;
+  cursor: pointer;
+  height: 24px;
 }
 
 .bonus p {
