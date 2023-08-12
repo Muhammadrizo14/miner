@@ -40,9 +40,10 @@
                 <img src="img/header/eth.svg" alt="">
                 <p>2789.3829 ETH</p>
               </div>
-              <div class="eth__wallet">
+              <div class="eth__wallet eth__wallet__rub">
                 <img src="img/header/rub.png" alt="">
                 <p>278939 RUB</p>
+                <button class="get__money">Вывести</button>
               </div>
             </div>
             <img class="profile__image" src="img/profileimage.png" alt="">
@@ -173,7 +174,7 @@
     </div>
 
     <div class="auth"></div>
-    <div class="auth__content">
+    <div class="auth__content popup">
       <div class="auth__func">
         <h3 class="auth__func__title">Авторизация</h3>
         <a href="#" class="auth__button">
@@ -189,10 +190,32 @@
     </div>
 
 
+    <div class="getMoneyContent popup">
+      <h3 class="getMoneyContent__title">Вывод</h3>
+      <div class="choose_wallet__wrap getMoneyContent__wrap">
+        <label for="choosewallet">Выберите кошелек</label>
+        <select name="choosewallet" id="cars">
+          <option value="volvo">ЮMoney</option>
+          <option value="saab">Qiwi</option>
+          <option value="mercedes">Сбербанк</option>
+          <option value="audi">Тинькофф</option>
+        </select>
+      </div>
+      <div class="numberofwallet__wrap getMoneyContent__wrap">
+        <label for="numberofwallet">Номер вашего кошелька</label>
+        <input type="text" name="numberofwallet">
+      </div>
+      <div class="getMoneyContentPrice getMoneyContent__wrap">
+        <label for="price">Сумма вывода</label>
+        <input type="text" placeholder="от 400 до 10 000" name="price">
+      </div>
+      <button class="button getMoneyContentButton">Вывести</button>
 
-    <script src="../js/swiper.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/main.js"></script>
+
+
+      <script src="../js/swiper.js"></script>
+      <script src="js/home.js"></script>
+      <script src="js/main.js"></script>
 </body>
 
 </html>

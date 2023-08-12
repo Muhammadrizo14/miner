@@ -1,27 +1,44 @@
-let sidebar = document.querySelector('.sidebar')
-let burgerMenuButton = document.querySelector('.burger__menu')
-
-
+let profileImage = document.querySelector('.profile__image'),
+auth = document.querySelector('.auth')
+sidebar = document.querySelector('.sidebar')
+burgerMenuButton = document.querySelector('.burger__menu')
+getMoney = document.querySelector('.get__money')
+popup = document.querySelectorAll('.popup')
+getMoneyContent = document.querySelector('.getMoneyContent')
+authContent = document.querySelector('.auth__content')
 
 window.onload = () => {
   document.querySelector('#preloader').style.display = 'none'
 }
 
 
-let profileImage = document.querySelector('.profile__image'),
-auth = document.querySelector('.auth'),
-authContent = document.querySelector('.auth__content')
+
 
 auth.addEventListener('click',()=> {
   auth.style.display = 'none'
-  authContent.style.display = 'none'
+  popup.forEach((i)=> {
+    i.style.display = 'none'
+  })
+  StopScroll(true)
 })
 
 
 profileImage.addEventListener('click', ()=> {
   auth.style.display = 'block'
   authContent.style.display = 'flex'
+  StopScroll(false)
 })
+
+
+function StopScroll(scroll) {
+  if (scroll === true){
+    console.log(`scroll`);
+    document.querySelector('body').style.overflow = 'scroll'
+  } else if (scroll === false) {
+    console.log(`do not scroll`);
+    document.querySelector('body').style.overflow = 'hidden'
+  }
+}
 
 
 
@@ -34,18 +51,24 @@ function myFunction(x) {
 }
 
 var x = window.matchMedia("(max-width: 1152px)")
-myFunction(x) 
+myFunction(x)
 
 //Burger Menu
 burgerMenuButton.addEventListener('click', () => {
-  console.log(sidebar.style.left);
   if (sidebar.style.left === '0px') {
     // if burger menu if close
     sidebar.style.left = '-100%'
-    document.querySelector('body').style.overflow = 'scroll'
+    StopScroll(true)
   } else if (sidebar.style.left === '-100%') {
     // if burger menu open
     sidebar.style.left = '0'
-    document.querySelector('body').style.overflow = 'hidden'
+    StopScroll(false)
   }
+})
+
+
+getMoney.addEventListener('click', ()=> {
+  auth.style.display = 'block'
+  StopScroll(false)
+  getMoneyContent.style.display = 'block'
 })
