@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".minerSlider", {
   loop: true,
   navigation: {
     nextEl: ".magazine__next",

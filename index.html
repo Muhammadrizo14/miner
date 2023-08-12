@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/swiper.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Miner</title>
 </head>
@@ -21,7 +22,7 @@
           <ul class="sidebar__list">
             <li><a href="/"><img src="img/profile.png" alt=""> Профиль</a></li>
             <li><a href="pages/magazine.html"><img src="img/shop.png" alt=""> Магазин</a></li>
-            <li><a href="/"><img src="img/recent.png" alt=""> История выводов</a></li>
+            <li><a href="pages/history.html"><img src="img/recent.png" alt=""> История выводов</a></li>
             <li><a href="/"><img src="img/telegram.png" alt=""> Канал проекта</a></li>
             <li><a href="/"><img src="img/support.png" alt=""> Поддержка</a></li>
           </ul>
@@ -29,22 +30,27 @@
         <a href="#" class="sidebar__logout"><img src="img/quit.svg" alt="quit"> Выйти из системы</a>
       </div>
       <div class="content">
-        <div class="content__header">
-          <div class="content__wallets">
-            <div class="eth__wallet">
-              <img src="img/header/eth.svg" alt="">
-              <p>2789.3829 ETH</p>
-            </div>
-            <div class="eth__wallet">
-              <img src="img/header/rub.png" alt="">
-              <p>278939 RUB</p>
-            </div>
+        <div class="content__header__wrap">
+          <div class="burger__menu">
+            <img src="./img/burgermenu.svg" class="burgermenu" alt="">
           </div>
-          <img class="profile__image" src="img/profileimage.png" alt="">
+          <div class="content__header">
+            <div class="content__wallets">
+              <div class="eth__wallet">
+                <img src="img/header/eth.svg" alt="">
+                <p>2789.3829 ETH</p>
+              </div>
+              <div class="eth__wallet">
+                <img src="img/header/rub.png" alt="">
+                <p>278939 RUB</p>
+              </div>
+            </div>
+            <img class="profile__image" src="img/profileimage.png" alt="">
+          </div>
         </div>
         <div class="main__content">
-          <div class="blocks">
-            <div class="first__block">
+          <div class="blocks ">
+            <div class="first__block current__first__block">
               <div>
                 <p class="first__block__uptitle">Кошелек ETH:</p>
                 <h3 class="first__block__title"><span>2324.5657</span> ETH</h3>
@@ -64,36 +70,61 @@
               </div>
             </div>
           </div>
-          <div class="blocks">
+          <div class="blocks ">
             <div class="third__block first__block">
               <div class="third__block__fistline">
                 <div class="third__block__cards">
-                  <div class="card">
-                    <img src="img/Cryptocarency Exchange - Colorful (Leftview) 1.png" alt="">
-                    <p class="card__device">Ваше устройство</p>
-                    <p class="card__device">Скорость: <span>0.0000910 ETH/H</span></p>
+                  <div class="swiper MainPageSlider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img src="img/Gpu Mining - Colorful (Leftview) 1.png" alt="">
+                          <p class="card__device">Ваше устройство</p>
+                          <p class="card__device">Скорость: <span>0.0000910 ETH/H</span></p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img src="img/Gpu Mining - Colorful (Leftview) 1.png" alt="">
+                          <p class="card__device">Ваше устройство</p>
+                          <p class="card__device">Скорость: <span>0.0000910 ETH/H</span></p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img src="img/Gpu Mining - Colorful (Leftview) 1.png" alt="">
+                          <p class="card__device">Ваше устройство</p>
+                          <p class="card__device">Скорость: <span>0.0000910 ETH/H</span></p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img src="img/Gpu Mining - Colorful (Leftview) 1.png" alt="">
+                          <p class="card__device">Ваше устройство</p>
+                          <p class="card__device">Скорость: <span>0.0000910 ETH/H</span></p>
+                        </div>
+                      </div>
+                    </div>
+
+
                   </div>
-                  <div class="card">
-                    <img src="img/Gpu Mining - Colorful (Leftview) 1.png" alt="">
-                    <p class="card__device">SHA-256</p>
-                    <p class="card__device">Скорость: <span>0.001500 ETH/hr</span></p>
+                  <div class="addnewdevice arrow">
+                    +
                   </div>
                 </div>
-                <div class="addnewdevice arrow">
-                  +
+                <div class="third__block__arrows">
+                  <div class="arrow__prev arrow arrow__prevMainPageSlider">
+                    <img src="img/prev.png" alt="">
+                  </div>
+                  <div class="arrow__next arrow arrow__nextMainPageSlider">
+                    <img src="img/next.png" alt="">
+                  </div>
                 </div>
               </div>
-              <div class="third__block__arrows">
-                <div class="arrow__prev arrow">
-                  <img src="img/prev.png" alt="">
-                </div>
-                <div class="arrow__next arrow">
-                  <img src="img/next.png" alt="">
-                </div>
-              </div>
+
             </div>
             <div class="fourth__block first__block">
-              <div>
+              <div class="fourth__block__text">
                 <h1 class="fourth__block__title">Конвертер валют</h1>
                 <input class="replace__input" type="text">
                 <img class="replace__image" src="img/replace.png" alt="">
@@ -102,8 +133,9 @@
               </div>
               <button class="replace__button button">Обменять</button>
             </div>
+
           </div>
-          <div class="blocks">
+          <div class="blocks last__block__wrap">
             <div class="fivth__block first__block">
               <div class="fivth__block__first">
                 <h3 class="fivth__block__first__title">Реферальная система</h3>
@@ -139,26 +171,28 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="auth"></div>
-  <div class="auth__content">
-    <div class="auth__func">
-      <h3 class="auth__func__title">Авторизация</h3>
-      <a href="#" class="auth__button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <path
-            d="M17.7797 3.0394L0.890296 9.61039C-0.262337 10.0775 -0.255669 10.7262 0.678821 11.0155L5.01501 12.3803L15.0477 5.9938C15.5221 5.70259 15.9555 5.85925 15.5992 6.17833L7.47078 13.5797H7.46887L7.47078 13.5807L7.17167 18.0901C7.60986 18.0901 7.80323 17.8873 8.049 17.648L10.1552 15.5817L14.5361 18.8465C15.3439 19.2953 15.9241 19.0647 16.125 18.092L19.0009 4.41761C19.2953 3.22681 18.5503 2.68764 17.7797 3.0394Z"
-            fill="#D9D9D9" />
-        </svg>
-        Войти
-      </a>
+    <div class="auth"></div>
+    <div class="auth__content">
+      <div class="auth__func">
+        <h3 class="auth__func__title">Авторизация</h3>
+        <a href="#" class="auth__button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path
+              d="M17.7797 3.0394L0.890296 9.61039C-0.262337 10.0775 -0.255669 10.7262 0.678821 11.0155L5.01501 12.3803L15.0477 5.9938C15.5221 5.70259 15.9555 5.85925 15.5992 6.17833L7.47078 13.5797H7.46887L7.47078 13.5807L7.17167 18.0901C7.60986 18.0901 7.80323 17.8873 8.049 17.648L10.1552 15.5817L14.5361 18.8465C15.3439 19.2953 15.9241 19.0647 16.125 18.092L19.0009 4.41761C19.2953 3.22681 18.5503 2.68764 17.7797 3.0394Z"
+              fill="#D9D9D9" />
+          </svg>
+          Войти
+        </a>
+      </div>
+      <img class="bigtelegram" src="img/bigtelegram.png" alt="">
     </div>
-    <img class="bigtelegram" src="img/bigtelegram.png" alt="">
-  </div>
 
-  <script src="js/home.js"></script>
-  <script src="js/main.js"></script>
+
+
+    <script src="../js/swiper.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

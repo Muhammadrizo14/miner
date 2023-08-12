@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/swiper.css" />
 
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/magazine.css">
@@ -24,7 +24,7 @@
           <ul class="sidebar__list">
             <li><a href="/"><img src="../img/profile.png" alt=""> Профиль</a></li>
             <li><a href="magazine.html"><img src="../img/shop.png" alt=""> Магазин</a></li>
-            <li><a href="/"><img src="../img/recent.png" alt=""> История выводов</a></li>
+            <li><a href="history.html"><img src="../img/recent.png" alt=""> История выводов</a></li>
             <li><a href="/"><img src="../img/telegram.png" alt=""> Канал проекта</a></li>
             <li><a href="/"><img src="../img/support.png" alt=""> Поддержка</a></li>
           </ul>
@@ -32,18 +32,23 @@
         <a href="#" class="sidebar__logout"><img src="../img/quit.svg" alt="quit"> Выйти из системы</a>
       </div>
       <div class="content">
-        <div class="content__header">
-          <div class="content__wallets">
-            <div class="eth__wallet">
-              <img src="../img/header/eth.svg" alt="">
-              <p>2789.3829 ETH</p>
-            </div>
-            <div class="eth__wallet">
-              <img src="../img/header/rub.png" alt="">
-              <p>278939 RUB</p>
-            </div>
+        <div class="content__header__wrap">
+          <div class="burger__menu">
+            <img src="../img/burgermenu.svg" class="burgermenu" alt="">
           </div>
-          <img class="profile__image" src="../img/profileimage.png" alt="">
+          <div class="content__header">
+            <div class="content__wallets">
+              <div class="eth__wallet">
+                <img src="../img/header/eth.svg" alt="">
+                <p>2789.3829 ETH</p>
+              </div>
+              <div class="eth__wallet">
+                <img src="../img/header/rub.png" alt="">
+                <p>278939 RUB</p>
+              </div>
+            </div>
+            <img class="profile__image" src="../img/profileimage.png" alt="">
+          </div>
         </div>
         <div class="main__content">
           <div class="maner__block first__block">
@@ -71,7 +76,7 @@
                   <img src="../img/next.png" alt="">
                 </div>
               </div>
-              <div class="miner__slides mySwiper">
+              <div class="miner__slides minerSlider">
                 <div class="swiper-wrapper">
                   <div class="miner__slide swiper-slide first__block">
                     <img class="miner__slide__main__image" src="../img/magazine/product1.png" alt="">
@@ -284,7 +289,7 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="../js/swiper.js"></script>
   <script src="../js/magazine.js"></script>
   <script src="../js/main.js"></script>
 </body>
