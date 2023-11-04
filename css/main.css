@@ -216,32 +216,31 @@ li {
   padding: 8px 0px 6px 8px;
   border-radius: 10px;
   margin-right: 32px;
-  background: var(--blue-gradient, linear-gradient(270deg, #0D6CCA 0%, #1F87EA 100%));
+  background: linear-gradient(270deg, #0D6CCA 0%, #1F87EA 100%);
+}
+
+.eth__wallet__rub:hover {
+  width: fit-content;
+}
+.eth__wallet__rub:hover .get__money {
+  display: block;
+  transition: all 0.5s ease;
 }
 
 
+
 .get__money {
-  opacity: 0;
+  display: none;
   cursor: pointer;
-  width: 0;
   margin-left: 15px;
   border-radius: 10px;
   background-color: #000;
   color: #fff;
   border: 0;
-  padding: 0;
-}
-
-.eth__wallet__rub:hover {
-  padding-right: 6px;
-  width: 260px;
-}
-
-.eth__wallet__rub:hover .get__money {
-  width: fit-content;
-  opacity: 1;
   padding: 4px 28px;
+  margin-right: 10px;
 }
+
 
 
 
@@ -591,6 +590,7 @@ li {
   width: 24px;
   cursor: pointer;
   height: 24px;
+  padding-bottom: 10px;
 }
 
 .bonus p {
@@ -731,6 +731,15 @@ li {
 }
 
 
+@media (max-width: 500px) {
+  .bigtelegram {
+    display: none;
+  }
+  .auth__func__title {
+    text-align: center;
+  }
+}
+
 .burger__menu {
   display: none;
   z-index: 9;
@@ -772,7 +781,33 @@ li {
 @media (max-width: 680px) {
   .first__block {
     max-width: none;
-    width: 400px !important;
+    width: 96% !important;
+  }
+
+
+  .auth__func__title  {
+    font-size: 16px;
+  }
+
+  .bigtelegram {
+    margin-left: 10px;
+  }
+
+  
+
+  .pormocode {
+    padding-top: 30px;
+  }
+
+  .sixth__block__bonus {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .sixth__block {
+    height: auto;
   }
 
   .copy__wrap {
@@ -796,4 +831,5 @@ li {
   .auth__content {
     width: 98%;
   }
+
 }

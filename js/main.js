@@ -1,11 +1,12 @@
 let profileImage = document.querySelector('.profile__image'),
-auth = document.querySelector('.auth')
+  auth = document.querySelector('.auth')
 sidebar = document.querySelector('.sidebar')
 burgerMenuButton = document.querySelector('.burger__menu')
 getMoney = document.querySelector('.get__money')
 popup = document.querySelectorAll('.popup')
 getMoneyContent = document.querySelector('.getMoneyContent')
 authContent = document.querySelector('.auth__content')
+ethWalletRub = document.querySelector('.eth__wallet__rub')
 
 window.onload = () => {
   document.querySelector('#preloader').style.display = 'none'
@@ -14,16 +15,16 @@ window.onload = () => {
 
 
 
-auth.addEventListener('click',()=> {
+auth.addEventListener('click', () => {
   auth.style.display = 'none'
-  popup.forEach((i)=> {
+  popup.forEach((i) => {
     i.style.display = 'none'
   })
   StopScroll(true)
 })
 
 
-profileImage.addEventListener('click', ()=> {
+profileImage.addEventListener('click', () => {
   auth.style.display = 'block'
   authContent.style.display = 'flex'
   StopScroll(false)
@@ -31,11 +32,9 @@ profileImage.addEventListener('click', ()=> {
 
 
 function StopScroll(scroll) {
-  if (scroll === true){
-    console.log(`scroll`);
-    document.querySelector('body').style.overflow = 'scroll'
+  if (scroll === true) {
+    document.querySelector('body').style.overflow = 'auto'
   } else if (scroll === false) {
-    console.log(`do not scroll`);
     document.querySelector('body').style.overflow = 'hidden'
   }
 }
@@ -67,8 +66,32 @@ burgerMenuButton.addEventListener('click', () => {
 })
 
 
-getMoney.addEventListener('click', ()=> {
+getMoney.addEventListener('click', () => {
   auth.style.display = 'block'
   StopScroll(false)
   getMoneyContent.style.display = 'block'
 })
+
+
+// ethWalletRub.addEventListener('mouseenter', () => {
+//   ethWalletRub.style.padding = '6px'
+//   ethWalletRub.style.width = '260px'
+//
+//   setTimeout(() => {
+//     ethWalletRub.querySelector('.get__money').style.width = 'fit-content'
+//     ethWalletRub.querySelector('.get__money').style.opacity = '1'
+//     ethWalletRub.querySelector('.get__money').style.padding = '4px 28px'
+//   }, 200);
+// })
+//
+//
+// ethWalletRub.addEventListener('mouseleave', () => {
+//   ethWalletRub.querySelector('.get__money').style.width = '0px'
+//   ethWalletRub.querySelector('.get__money').style.opacity = '0'
+//   ethWalletRub.querySelector('.get__money').style.padding = '0px 0px'
+//
+//   setTimeout(() => {
+//     ethWalletRub.style.padding = '6px'
+//     ethWalletRub.style.width = '173px'
+//   }, 200);
+// })
