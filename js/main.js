@@ -71,27 +71,3 @@ getMoney.addEventListener('click', () => {
   StopScroll(false)
   getMoneyContent.style.display = 'block'
 })
-
-
-// ethWalletRub.addEventListener('mouseenter', () => {
-//   ethWalletRub.style.padding = '6px'
-//   ethWalletRub.style.width = '260px'
-//
-//   setTimeout(() => {
-//     ethWalletRub.querySelector('.get__money').style.width = 'fit-content'
-//     ethWalletRub.querySelector('.get__money').style.opacity = '1'
-//     ethWalletRub.querySelector('.get__money').style.padding = '4px 28px'
-//   }, 200);
-// })
-//
-//
-// ethWalletRub.addEventListener('mouseleave', () => {
-//   ethWalletRub.querySelector('.get__money').style.width = '0px'
-//   ethWalletRub.querySelector('.get__money').style.opacity = '0'
-//   ethWalletRub.querySelector('.get__money').style.padding = '0px 0px'
-//
-//   setTimeout(() => {
-//     ethWalletRub.style.padding = '6px'
-//     ethWalletRub.style.width = '173px'
-//   }, 200);
-// })

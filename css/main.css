@@ -269,9 +269,10 @@ li {
 
 .first__block {
   border-radius: 10px;
-  background: rgba(27, 26, 32, 0.60);
-  border: 1px solid rgba(28, 131, 232, 0.60);
   color: #FFF;
+  background: linear-gradient(#121720, #121720) padding-box,
+  linear-gradient(180deg, rgba(28,131,232,1) 21%, rgba(0,0,0,0.39548319327731096) 84%) border-box;
+  border: 2px solid transparent;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -282,6 +283,7 @@ li {
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 .first__block__uptitle {
   font-size: 20px;
@@ -632,6 +634,50 @@ li {
   align-items: center;
   justify-content: center;
 }
+.linemainblock {
+  max-width: 100%;
+}
+.linemainblock path {
+  stroke: #3682D3;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+  animation: draw 5s linear forwards;
+}
+
+.rocket__block {
+  position: relative;
+
+}
+
+.rocket {
+  position: absolute;
+  right: -27px;
+  bottom: -35px;
+  animation: rocket 1s linear infinite;
+}
+
+@media (min-width: 680px) {
+  @keyframes rocket {
+    0% {
+      right: -27px;
+      bottom: -35px;
+    }
+    50% {
+      right: -46px;
+      bottom: -47px;
+    }
+    100% {
+      right: -27px;
+      bottom: -35px;
+    }
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 
 .getMoneyContent {
   color: #fff;
@@ -771,10 +817,14 @@ li {
     flex-direction: column;
   }
 
-  .first__block {
+  .current__first__block {
     max-width: none;
     width: 600px !important;
   }
+}
+
+.mobile__logo {
+  display: none;
 }
 
 
@@ -832,4 +882,76 @@ li {
     width: 98%;
   }
 
+  .linemainblock {
+    width: 80%;
+  }
+
+  .first__block__title {
+    font-size: 24px;
+  }
+
+  .first__block__uptitle {
+    font-size: 14px;
+  }
+
+  .current__first__block img {
+    width: auto;
+  }
+
+
+  .current__first__block {
+    justify-content: unset;
+    height: 175px;
+  }
+
+  .last__block {
+    justify-content: end;
+  }
+
+  .last__block h3 {
+    display: none;
+  }
+
+  .rocket {
+    width: 160px;
+    right: 0px;
+    bottom: 28px;
+  }
+
+  .first__block__subtitle {
+    display: none;
+  }
+
+  .copy__wrap {
+    font-size: 14px;
+  }
+
+  .second__block {
+    height: 175px;
+  }
+
+  .second__block__uptitle {
+    font-size: 14px;
+  }
+
+  .second__block__title {
+    font-size: 24px;
+  }
+
+  .bonus {
+    width: 227px;
+
+  }
+
+  .bonus p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    width: auto;
+  }
+  
+  .mobile__logo {
+    width: 88px;
+    display: block;
+  }
 }
